@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: white;
+}
+
+/* Navbar */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;    
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: black; */
+    width: 30%;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #d70f64;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+header nav ul li a:hover {
+    font-weight: 700;
+}
+
+.button-nav {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    display: none;
+}
+
+.button-nav span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: #d70f64;
+    border-radius: 3px;
+}
+/* Navbar */
+
+/* Carousel */
+.carousel-containner {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.imageCarousel {
+    display: none;
+}
+
+.imageCarousel img {
+    max-width: 100%;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 15.s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+/* Carousel */
+
+main {
+    margin-top: 10px;
+}
+
+/* Containner Country */
+.containner-country {
+    background-color: rgba(185, 179, 179, 0.5);
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.country {
+    width: 60%;
+}
+/* Containner Country */
+
+
+/* About Us */
+.containner-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #d70f64;
+    text-align: center;
+    padding: 13px;
+}
+
+.paragraf {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.button {
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+    display: flex;
+    width: 250px;
+    height: 40px;
+    background-color: #d70f64;
+    border-radius: 2px;
+}
+
+h5 {
+    margin: auto;
+    color: white;
+}
+/* About Us */
+
+
+@media screen and (max-width: 768px) {
+    /* Containner Country */
+    .containner-country {
+        /* background-color: red; */
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .country {
+        /* background-color: black; */
+        width: 100%;
+        text-align: center;
+    }
+
+    .cc {
+       padding: 10px;
+    }
+    /* Containner Country */
+
+
+    /* About Us */
+    .paragraf {
+        width: 88%;
+        text-align: center;
+    }
+
+    .button {
+        width: 40%;
+        height: 50px;
+    }
+    /* About Us */
+
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 950px) {
+    header nav ul {
+        width: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    header nav ul {
+        position: fixed;
+        bottom: 100%;
+        left: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.7s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    header nav ul.active{
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        bottom: 52%;
+    }
+
+    header nav ul li{
+        margin: 2.5rem 0;
+    }
+
+    header nav ul li a:hover {
+        color: #ff3232;
+    }
+
+    .button-nav {
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+
+    .button-nav.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .button-nav.active span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .button-nav.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+/* Responsive Navbar */
